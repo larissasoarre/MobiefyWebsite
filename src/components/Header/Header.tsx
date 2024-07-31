@@ -7,9 +7,9 @@ export default function Header() {
 
   return (
     <div className="header-container">
-        <nav>
-            <span>Mobiefy</span>
-            <ol>
+        <nav className="header-navbar">
+            <span className="header-logo">Mobiefy</span>
+            <ol className="header-navigation">
                 <li>
                     <a href="">Sobre</a>
                 </li>
@@ -21,7 +21,7 @@ export default function Header() {
                 </li>
             </ol>
         </nav>
-        <div>
+        <div className="header-content">
             <p>Desbloqueando viagens inteligentes com seu passaporte de mobilidade eficiente!</p>
             <Button>Comece Já</Button>
         </div>
