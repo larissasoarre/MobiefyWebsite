@@ -1,14 +1,14 @@
 .button {
-    border: none;
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    font-family: var(--fontFamily-text);
-    font-weight: var(--fontWeight-bold);
-    font-size: var(--fontSize-desktop-s); 
-    letter-spacing: 1.5px;
-    border-radius: 47px;
-    padding: 15px 45px;
-    width: fit-content; 
-    height: fit-content;
-    text-transform: uppercase;
+  border: none;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  font-family: var(--fontFamily-text);
+  font-weight: var(--fontWeight-bold);
+  font-size: var(--fontSize-desktop-s);
+  letter-spacing: 1.5px;
+  border-radius: 47px;
+  padding: 15px 45px;
+  width: fit-content;
+  height: fit-content;
+  text-transform: uppercase;
 }
