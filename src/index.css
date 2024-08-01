@@ -9,9 +9,9 @@
   --fontFamily-text: "Roboto";
   --fontFamily-heading: "Righteous";
 
-  --fontSize-desktop-s: 15px;
-  --fontSize-desktop-m: 20px;
-  --fontSize-desktop-l: 67px;
+  --fontSize-desktop-s: 14px;
+  --fontSize-desktop-m: 17px;
+  --fontSize-desktop-l: 55px;
 
   --fontWeight-bold: 700;
   --fontWeight-regular: 400;
@@ -20,7 +20,7 @@
 
   --spacing-s: 30px;
   --spacing-m: 40px;
-  --spacing-l: 72px;
+  --spacing-l: 50px;
 }
 
 * {
@@ -35,6 +35,10 @@ body {
 a {
   position: relative;
   z-index: 1;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .cursor {
