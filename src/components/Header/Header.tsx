@@ -62,7 +62,7 @@ export default function Header({ cursorEnter, cursorLeave }: HeaderProps) {
         <span className="header-logo">Mobiefy</span>
         <ol className="header-navigation">
           <li>
-            <a onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} href="">
+            <a onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} href="#about">
               Sobre
             </a>
           </li>
