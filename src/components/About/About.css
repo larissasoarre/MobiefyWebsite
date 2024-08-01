@@ -1,0 +1,62 @@
+.about-scroll-area {
+  height: 200vh;
+}
+
+.about-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 0 140px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-m);
+  height: 100%;
+  max-width: 500px;
+}
+
+.about-content h3 {
+  color: var(--color-primary);
+  font-family: var(--fontFamily-heading);
+  font-size: var(--fontSize-desktop-l);
+  font-weight: var(--fontWeight-regular);
+}
+
+.about-content h3 span {
+  color: var(--color-secondary);
+}
+
+.about-content p {
+  color: var(--color-primary);
+  line-height: var(--lineHeight-desktop-s);
+}
+
+.phone-container {
+  position: absolute;
+  top: -200px;
+  right: 14%;
+}
+
+.phone-container .phone {
+  width: 400px;
+}
+
+.phone-container .route-one,
+.phone-container .route-two {
+  width: 323px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 20px;
+  transition: ease-in-out 0.3s;
+}
+
+.phone-container .route-icon {
+  width: 53px;
+  position: absolute;
+  z-index: 1;
+  transition: ease-in-out 0.3s;
+  border-radius: 13px;
+}

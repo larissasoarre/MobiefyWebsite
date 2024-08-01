@@ -2,6 +2,7 @@ import { MouseEventHandler, useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import { motion, useSpring } from "framer-motion";
+import About from "./components/About/About";
 
 export type CursorProps = {
   cursorEnter?: MouseEventHandler;
@@ -55,7 +56,8 @@ function App() {
         animate={cursorVariant}
         transition={{ duration: 0.2 }}
       />
-      <Header cursorEnter={cursorEnter} cursorLeave={cursorLeave}></Header>
+      <Header cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
+      <About cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
     </>
   );
 }

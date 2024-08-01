@@ -23,6 +23,10 @@
   --spacing-l: 50px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -39,6 +43,16 @@ a {
 
 a:hover {
   cursor: pointer;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  font-family: var(--fontFamily-text);
+  font-size: var(--fontSize-desktop-m);
+  margin: 0;
 }
 
 .cursor {
