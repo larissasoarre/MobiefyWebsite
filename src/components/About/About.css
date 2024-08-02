@@ -38,6 +38,7 @@
   position: absolute;
   top: -200px;
   right: 14%;
+  z-index: 2;
 }
 
 .phone-container .phone {
@@ -50,13 +51,60 @@
   position: absolute;
   z-index: 1;
   border-radius: 20px;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.7s;
 }
 
 .phone-container .route-icon {
   width: 53px;
   position: absolute;
   z-index: 1;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.7s;
   border-radius: 13px;
+}
+
+.about-el-1,
+.about-el-2,
+.about-el-3,
+.about-el-4,
+.about-el-5,
+.about-el-6 {
+  position: absolute;
+  z-index: 3;
+}
+
+.about-el-1 {
+  width: 200px;
+  top: -100px;
+  left: 210px;
+}
+
+.about-el-2 {
+  width: 28px;
+  bottom: 220px;
+  left: 70px;
+}
+
+.about-el-3 {
+  width: 25px;
+  bottom: 40px;
+  right: 370px;
+}
+
+.about-el-4 {
+  width: 18px;
+  top: 150px;
+  right: 670px;
+}
+
+.about-el-5 {
+  width: 18px;
+  top: 90px;
+  right: -10px;
+}
+
+.about-el-6 {
+  width: 200px;
+  top: 30%;
+  right: 130px;
+  z-index: 1;
 }

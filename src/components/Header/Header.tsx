@@ -11,7 +11,7 @@ import DecorFive from "../../assets/images/decor_6.png";
 import DecorSix from "../../assets/images/decor_7.png";
 
 type HeaderProps = CursorProps & HTMLProps<HTMLDivElement>;
-type Elements = {
+export type Elements = {
   image: string;
   delay: number;
 };
@@ -22,10 +22,10 @@ export default function Header({ cursorEnter, cursorLeave }: HeaderProps) {
       image: DecorOne,
       delay: 0,
     },
-    {
-      image: DecorOne,
-      delay: 0.1,
-    },
+    // {
+    //   image: DecorOne,
+    //   delay: 0.1,
+    // },
     {
       image: DecorTwo,
       delay: 0.2,
@@ -91,7 +91,7 @@ export default function Header({ cursorEnter, cursorLeave }: HeaderProps) {
         {elements.map((element, idx) => (
           <motion.img
             key={idx}
-            className={`el-${idx + 1}`}
+            className={`header-el-${idx + 1}`}
             aria-hidden="true"
             src={element.image}
             alt=""

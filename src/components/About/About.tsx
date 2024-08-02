@@ -1,13 +1,51 @@
 import "./About.css";
 import { HTMLProps, useEffect, useRef, useState } from "react";
 import { CursorProps } from "../../App";
+import {
+  motion,
+  useAnimation,
+  useInView,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import Phone from "../../assets/images/phone_1.png";
 import RouteIcon from "../../assets/images/route_icon.png";
 import RouteOne from "../../assets/images/route_1.png";
 import RouteTwo from "../../assets/images/route_2.png";
-import { motion, useScroll, useTransform } from "framer-motion";
+import DecorOne from "../../assets/images/decor_1.png";
+import DecorTwo from "../../assets/images/decor_6.png";
+import DecorThree from "../../assets/images/decor_7.png";
+import DecorFour from "../../assets/images/decor_9.png";
+import { Elements } from "../Header/Header";
 
 type AboutProps = CursorProps & HTMLProps<HTMLDivElement>;
+
+const elements: Elements[] = [
+  {
+    image: DecorOne,
+    delay: 0.1,
+  },
+  {
+    image: DecorTwo,
+    delay: 0.2,
+  },
+  {
+    image: DecorThree,
+    delay: 0.3,
+  },
+  {
+    image: DecorThree,
+    delay: 0.3,
+  },
+  {
+    image: DecorThree,
+    delay: 0.3,
+  },
+  {
+    image: DecorFour,
+    delay: 0.4,
+  },
+];
 
 export default function About({ ...props }: AboutProps) {
   const targetRef = useRef(null);
@@ -29,6 +67,24 @@ export default function About({ ...props }: AboutProps) {
   const phoneY = useTransform(scrollYProgress, [0, 0.5], ["-450px", "-150px"]);
   const phoneX = useTransform(scrollYProgress, [0, 0.5], ["14%", "17%"]);
   const phoneScale = useTransform(scrollYProgress, [0, 0.5], [1.2, 1]);
+
+  const elementsVariants = {
+    visible: {
+      scale: [0, 1],
+      opacity: [0, 1],
+      transition: { duration: 0.5 },
+    },
+    hidden: { opacity: 0, scale: 0 },
+  };
+
+  const controls = useAnimation();
+  const ref = useRef<HTMLImageElement>(null);
+  const inView = useInView(ref, { once: true });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
   return (
     <div className="about-scroll-area" ref={targetRef} {...props} id="about">
@@ -98,6 +154,19 @@ export default function About({ ...props }: AboutProps) {
             }}
           />
         </motion.div>
+        {elements.map((element, idx) => (
+          <motion.img
+            key={idx}
+            className={`about-el-${idx + 1}`}
+            aria-hidden="true"
+            src={element.image}
+            alt=""
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={elementsVariants}
+          />
+        ))}
       </div>
     </div>
   );

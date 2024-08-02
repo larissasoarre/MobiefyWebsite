@@ -54,60 +54,54 @@
   z-index: 3;
 }
 
-.header-elements .el-1 {
+.header-elements .header-el-1 {
   width: 120px;
   transform: rotate(160deg);
   top: 100px;
   left: -70px;
 }
 
-.header-elements .el-2 {
-  width: 236px;
-  bottom: -134px;
-  left: 13%;
-}
-
-.header-elements .el-3 {
+.header-elements .header-el-2 {
   width: 65px;
   top: 70px;
   left: 32%;
 }
 
-.header-elements .el-4 {
+.header-elements .header-el-3 {
   width: 65px;
   top: 130px;
   right: 20%;
 }
 
-.header-elements .el-5 {
+.header-elements .header-el-4 {
   width: 110px;
   bottom: 220px;
   right: 42%;
 }
 
-.header-elements .el-6 {
+.header-elements .header-el-5 {
   width: 28px;
   transform: rotate(-118deg);
   bottom: 220px;
   left: 35%;
 }
 
-.header-elements .el-7,
-.header-elements .el-8 {
+.header-elements .header-el-6,
+.header-elements .header-el-7 {
   width: 22px;
 }
 
-.header-elements .el-7 {
+.header-elements .header-el-6 {
   bottom: 300px;
   left: 5%;
 }
 
-.header-elements .el-8 {
+.header-elements .header-el-7 {
   bottom: 130px;
   right: 3%;
 }
 
-.header-elements .el-9 {
+.header-elements .header-el-8 {
   width: 15px;
   transform: rotate(-118deg);
   top: 200px;
