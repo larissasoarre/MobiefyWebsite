@@ -87,7 +87,7 @@ export default function About({ ...props }: AboutProps) {
   }, [controls, inView]);
 
   return (
-    <div className="about-scroll-area" ref={targetRef} {...props} id="about">
+    <div className="about-scroll-area" ref={targetRef} {...props}>
       <div className="about-container">
         <div className="about-content">
           <h3>
@@ -168,6 +168,7 @@ export default function About({ ...props }: AboutProps) {
           />
         ))}
       </div>
+      <div id="about"></div>
     </div>
   );
 }
