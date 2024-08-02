@@ -1,5 +1,12 @@
 .about-scroll-area {
   height: 200vh;
+  position: relative;
+}
+
+#about {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .about-container {
