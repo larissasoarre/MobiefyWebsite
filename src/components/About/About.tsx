@@ -9,7 +9,7 @@ import {
   useTransform,
 } from "framer-motion";
 import Phone from "../../assets/images/phone_1.png";
-import RouteIcon from "../../assets/images/route_icon.png";
+import RouteIcon from "../../assets/images/block_1.png";
 import RouteOne from "../../assets/images/route_1.png";
 import RouteTwo from "../../assets/images/route_2.png";
 import DecorOne from "../../assets/images/decor_1.png";

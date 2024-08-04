@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import { motion, useSpring } from "framer-motion";
 import About from "./components/About/About";
+import Accessibility from "./components/Accessibility/Accessibility";
 
 export type CursorProps = {
   cursorEnter?: MouseEventHandler;
@@ -57,7 +58,8 @@ function App() {
         transition={{ duration: 0.2 }}
       />
       <Header cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
-      <About cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
+      <About />
+      <Accessibility />
     </>
   );
 }

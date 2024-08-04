@@ -1,0 +1,110 @@
+.acessibility-scroll-area {
+  height: 300vh;
+  position: relative;
+}
+
+.acessibility-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acessibility-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: var(--spacing-m);
+  max-width: 550px;
+}
+
+.acessibility-content h3 {
+  color: var(--color-primary);
+  font-family: var(--fontFamily-heading);
+  font-size: var(--fontSize-desktop-l);
+  font-weight: var(--fontWeight-regular);
+}
+
+.acessibility-content h3 span {
+  color: var(--color-secondary);
+}
+
+.acessibility-content p {
+  color: var(--color-primary);
+  line-height: var(--lineHeight-desktop-s);
+}
+
+.block-container {
+  position: absolute;
+  width: 155px;
+  right: 89px;
+}
+
+.block-container img {
+  width: 75px;
+  display: block;
+  margin-top: 8px;
+}
+
+.about-block-1,
+.about-block-3 {
+  margin-left: auto;
+}
+
+.about-man-baloon {
+  position: absolute;
+  left: 32px;
+  width: 550px;
+}
+
+.acessibility-el-1,
+.acessibility-el-2,
+.acessibility-el-3,
+.acessibility-el-4,
+.acessibility-el-5,
+.acessibility-el-6 {
+  position: absolute;
+  z-index: 3;
+}
+
+.acessibility-el-1 {
+  width: 280px;
+  top: -150px;
+  left: 25%;
+}
+
+.acessibility-el-2 {
+  width: 70px;
+  top: 100px;
+  right: 30%;
+}
+
+.acessibility-el-3 {
+  width: 25px;
+  bottom: 150px;
+  left: 45%;
+}
+
+.acessibility-el-4 {
+  width: 18px;
+  top: 200px;
+  left: 20%;
+}
+
+.acessibility-el-5 {
+  width: 200px;
+  bottom: -100px;
+  right: 12%;
+}
+
+.acessibility-el-6 {
+  width: 25px;
+  top: 70%;
+  left: 20px;
+  z-index: 1;
+}

@@ -34,6 +34,7 @@ html {
 body {
   margin: 0;
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -60,5 +61,12 @@ p {
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 1;
+  z-index: 99;
+}
+
+.no-copy {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
