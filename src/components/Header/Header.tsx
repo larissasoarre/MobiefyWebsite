@@ -62,17 +62,35 @@ export default function Header({ cursorEnter, cursorLeave }: HeaderProps) {
         <span className="header-logo">Mobiefy</span>
         <ol className="header-navigation">
           <li>
-            <a onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} href="#about">
+            <a
+              onMouseEnter={cursorEnter}
+              onMouseLeave={cursorLeave}
+              href="#about"
+            >
               Sobre
             </a>
           </li>
           <li>
-            <a onMouseEnter={cursorEnter} onMouseLeave={cursorLeave} href="">
+            <a
+              onMouseEnter={cursorEnter}
+              onMouseLeave={cursorLeave}
+              href="#features"
+            >
               Vantagens
             </a>
           </li>
           <li>
-            <Button onMouseEnter={cursorEnter} onMouseLeave={cursorLeave}>
+            <Button
+              onMouseEnter={cursorEnter}
+              onMouseLeave={cursorLeave}
+              onClick={() =>
+                window.open(
+                  "https://github.com/larissasoarre/Mobiefy",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
               Baixar App
             </Button>
           </li>

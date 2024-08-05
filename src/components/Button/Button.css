@@ -1,16 +1,30 @@
 .button {
   border: none;
   color: var(--color-white);
-  background-color: var(--color-primary);
   font-family: var(--fontFamily-text);
-  font-weight: var(--fontWeight-bold);
-  font-size: var(--fontSize-desktop-s);
-  letter-spacing: 1.5px;
   border-radius: 47px;
   padding: 12px 40px;
   width: fit-content;
   height: fit-content;
+}
+
+.button-standard {
+  background-color: var(--color-primary);
+  font-weight: var(--fontWeight-bold);
+  font-size: var(--fontSize-desktop-s);
+  letter-spacing: 1.5px;
+  padding: 12px 40px;
   text-transform: uppercase;
+}
+
+.button-mobile {
+  background-color: var(--color-secondary);
+  font-weight: var(--fontWeight-semibold);
+  font-size: var(--fontSize-desktop-xs);
+  letter-spacing: 0.44px;
+  padding: 11px 18px;
+  display: flex;
+  gap: 5px;
 }
 
 .button:hover {

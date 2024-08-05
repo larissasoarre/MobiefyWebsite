@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import { motion, useSpring } from "framer-motion";
 import About from "./components/About/About";
 import Accessibility from "./components/Accessibility/Accessibility";
+import Features from "./components/Features/Features";
 
 export type CursorProps = {
   cursorEnter?: MouseEventHandler;
@@ -60,6 +61,7 @@ function App() {
       <Header cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
       <About />
       <Accessibility />
+      <Features cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
     </>
   );
 }
