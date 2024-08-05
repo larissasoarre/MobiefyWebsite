@@ -22,10 +22,6 @@ export default function Header({ cursorEnter, cursorLeave }: HeaderProps) {
       image: DecorOne,
       delay: 0,
     },
-    // {
-    //   image: DecorOne,
-    //   delay: 0.1,
-    // },
     {
       image: DecorTwo,
       delay: 0.2,

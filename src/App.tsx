@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Accessibility from "./components/Accessibility/Accessibility";
 import Features from "./components/Features/Features";
 import Route from "./components/Route/Route";
+import Footer from "./components/Footer/Footer";
 
 export type CursorProps = {
   cursorEnter?: MouseEventHandler;
@@ -40,7 +41,8 @@ function App() {
       height: 80,
       left: -40,
       top: -40,
-      mixBlendMode: "difference" as const,
+      backgroundColor: "var(--color-secondary)",
+      mixBlendMode: "exclusion" as const,
     },
   };
 
@@ -64,6 +66,7 @@ function App() {
       <Accessibility />
       <Features cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
       <Route />
+      <Footer cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
     </>
   );
 }
