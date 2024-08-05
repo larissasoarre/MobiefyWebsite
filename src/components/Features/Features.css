@@ -42,11 +42,13 @@
   color: var(--color-secondary);
   position: absolute;
   left: 0;
+  transition: opacity ease-in-out 0.3s;
 }
 
 .features-phone-position {
   position: absolute;
   top: 50%;
+  z-index: 2;
 }
 
 .features-phone-container {
@@ -101,4 +103,100 @@
   transform: translateX(-50%);
   transition: bottom ease-in-out 0.3s;
   z-index: 3;
+}
+
+.features-confetti img {
+  position: absolute;
+  transition: opacity ease-in-out 0.3s;
+}
+
+.confetti-el-1 {
+  width: 55px;
+}
+
+.confetti-el-2 {
+  width: 30px;
+}
+
+.confetti-el-3 {
+  width: 18px;
+}
+
+.confetti-el-4 {
+  width: 65px;
+}
+
+.confetti-el-5 {
+  width: 130px;
+  rotate: -150deg;
+}
+
+.confetti-el-6 {
+  width: 55px;
+}
+
+.confetti-el-7 {
+  width: 40px;
+}
+
+.confetti-el-8 {
+  width: 58px;
+  rotate: 50deg;
+}
+
+.confetti-el-9 {
+  width: 63px;
+}
+
+.confetti-el-10 {
+  width: 47px;
+}
+
+.confetti-el-11 {
+  width: 50px;
+}
+
+.confetti-el-12 {
+  width: 130px;
+  rotate: -200deg;
+}
+
+.confetti-el-13 {
+  width: 40px;
+  rotate: 80deg;
+}
+
+.confetti-el-14 {
+  width: 63px;
+  rotate: -130deg;
+}
+
+.confetti-el-15 {
+  width: 18px;
+}
+
+.confetti-el-16 {
+  width: 14px;
+}
+
+.confetti-el-17 {
+  width: 65px;
+}
+
+.confetti-el-18 {
+  width: 58px;
+}
+
+.confetti-el-19 {
+  width: 130px;
+  rotate: 40deg;
+}
+
+.confetti-el-20 {
+  width: 30px;
+}
+
+.confetti-el-21 {
+  width: 35px;
+  rotate: 90deg;
 }

@@ -6,6 +6,17 @@ import PhoneFrame from "../../assets/images/phone_frame.png";
 import Screen from "../../assets/images/screen_1.png";
 import Button from "../Button/Button";
 import PaymentPopUp from "../../assets/images/payment_successfull.png";
+import DecorOne from "../../assets/images/decor_2.png";
+import DecorTwo from "../../assets/images/decor_6.png";
+import DecorThree from "../../assets/images/decor_7.png";
+import DecorFour from "../../assets/images/decor_8.png";
+import DecorFive from "../../assets/images/decor_9.png";
+import DecorSix from "../../assets/images/decor_10.png";
+import DecorSeven from "../../assets/images/decor_4.png";
+import DecorEight from "../../assets/images/decor_11.png";
+import DecorNine from "../../assets/images/decor_12.png";
+import DecorTen from "../../assets/images/decor_13.png";
+import DecorEleven from "../../assets/images/decor_14.png";
 
 type FeaturesProps = CursorProps;
 
@@ -54,7 +65,113 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
     useTransform(scrollYProgress, [0.76, 0.8], [1, 0]),
   ];
 
-  console.log(currentScrollY);
+  const confetti = [
+    {
+      image: DecorOne,
+      finalX: "7%",
+      finalY: "40%",
+    },
+    {
+      image: DecorTwo,
+      finalX: "67%",
+      finalY: "10%",
+    },
+    {
+      image: DecorThree,
+      finalX: "95%",
+      finalY: "35%",
+    },
+    {
+      image: DecorFour,
+      finalX: "85%",
+      finalY: "48%",
+    },
+    {
+      image: DecorFive,
+      finalX: "15%",
+      finalY: "52%",
+    },
+    {
+      image: DecorSix,
+      finalX: "82%",
+      finalY: "83%",
+    },
+    {
+      image: DecorSeven,
+      finalX: "25%",
+      finalY: "34%",
+    },
+    {
+      image: DecorEight,
+      finalX: "80%",
+      finalY: "16^",
+    },
+    {
+      image: DecorNine,
+      finalX: "26%",
+      finalY: "5%",
+    },
+    {
+      image: DecorTen,
+      finalX: "70%",
+      finalY: "40%",
+    },
+    {
+      image: DecorEleven,
+      finalX: "30%",
+      finalY: "87%",
+    },
+    {
+      image: DecorFive,
+      finalX: "56%",
+      finalY: "82%",
+    },
+    {
+      image: DecorSeven,
+      finalX: "73%",
+      finalY: "65%",
+    },
+    {
+      image: DecorNine,
+      finalX: "97%",
+      finalY: "75%",
+    },
+    {
+      image: DecorThree,
+      finalX: "30%",
+      finalY: "65%",
+    },
+    {
+      image: DecorThree,
+      finalX: "55%",
+      finalY: "20px",
+    },
+    {
+      image: DecorFour,
+      finalX: "10%",
+      finalY: "80%",
+    },
+    {
+      image: DecorEight,
+      finalX: "1%",
+      finalY: "8%",
+    },
+    {
+      image: DecorFive,
+      finalX: "92%",
+      finalY: "0",
+    },
+    {
+      image: DecorTwo,
+      finalX: "2%",
+      finalY: "65%",
+    },
+    {
+      image: DecorSix,
+      finalX: "15%",
+      finalY: "20%",
+    },
+  ];
 
   return (
     <div className="features-scroll-area" ref={targetRef}>
@@ -70,7 +187,14 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
               </motion.span>
             ))}
           </h3>
-          <motion.span style={{ bottom: wordTop }}>um clique</motion.span>
+          <motion.span
+            style={{
+              bottom: wordTop,
+              opacity: isButtonClicked && currentScrollY > 0.95 ? 0 : 1,
+            }}
+          >
+            um clique
+          </motion.span>
         </div>
 
         <motion.div
@@ -148,6 +272,26 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
             />
           </div>
         </motion.div>
+
+        <div className="features-confetti">
+          {confetti.map((element, idx) => (
+            <motion.img
+              key={idx}
+              className={`confetti-el-${idx + 1}`}
+              aria-hidden="true"
+              src={element.image}
+              alt=""
+              animate={{
+                bottom: isButtonClicked ? element.finalY : "50%",
+                left: isButtonClicked ? element.finalX : "50%",
+              }}
+              style={{
+                opacity: isButtonClicked && currentScrollY > 0.95 ? 1 : 0,
+                rotate: isButtonClicked ? 1 : 0.5,
+              }}
+            />
+          ))}
+        </div>
       </motion.div>
       <div id="features"></div>
     </div>
