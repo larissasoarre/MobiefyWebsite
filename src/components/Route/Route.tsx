@@ -88,6 +88,7 @@ export default function Route() {
             opacity: phoneOpacity,
             top: phoneTop,
             right: phoneLeft,
+            visibility: currentScrollY > 0.000000001 ? "visible" : "hidden",
           }}
         >
           <div className="route-phone-container">
