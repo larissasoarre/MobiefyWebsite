@@ -58,7 +58,7 @@ export default function Footer({ cursorEnter, cursorLeave }: CursorProps) {
     visible: {
       scale: [0, 1],
       opacity: [0, 1],
-      transition: { duration: 0.5 },
+      transition: { duration: 0.5, delay: 1 },
     },
     hidden: { opacity: 0, scale: 0 },
   };
