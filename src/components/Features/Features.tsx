@@ -194,7 +194,7 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
           <motion.span
             style={{
               bottom: wordTop,
-              opacity: isButtonClicked && currentScrollY > 0.95 ? 0 : 1,
+              opacity: isButtonClicked && currentScrollY > 0.8 ? 0 : 1,
             }}
           >
             um clique
@@ -226,11 +226,11 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
             />
             <motion.div
               className="features-button"
-              style={{ zIndex: isButtonClicked ? 3 : 4 }}
+              style={{ zIndex: isButtonClicked ? 3 : 6 }}
               animate={{
-                scale: currentScrollY > 0.95 ? [1, 1.1, 1, 1.1, 1] : undefined,
+                scale: currentScrollY > 0.8 ? [1, 1.1, 1, 1.1, 1] : undefined,
                 boxShadow:
-                  currentScrollY > 0.95
+                  currentScrollY > 0.8
                     ? [
                         "0px 0px 0px 0px rgba(0, 0, 0, 0.10)",
                         "0px 5px 17.9px 0px rgba(0, 0, 0, 0.10)",
@@ -296,7 +296,7 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
                 left: isButtonClicked ? element.finalX : "50%",
               }}
               style={{
-                opacity: isButtonClicked && currentScrollY > 0.95 ? 1 : 0,
+                opacity: isButtonClicked && currentScrollY > 0.8 ? 1 : 0,
                 rotate: isButtonClicked ? 1 : 0.5,
               }}
             />
