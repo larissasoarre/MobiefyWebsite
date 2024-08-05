@@ -44,11 +44,15 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
 
   const phoneRotate = useTransform(
     scrollYProgress,
-    [0.2, 1],
+    [0.2, 0.8],
     ["-90deg", "0deg"]
   );
-  const phoneY = useTransform(scrollYProgress, [0.2, 1], ["13%", "50%"]);
-  const wordTop = useTransform(scrollYProgress, [0.75, 1], ["-70px", "-230px"]);
+  const phoneY = useTransform(scrollYProgress, [0.2, 0.8], ["13%", "50%"]);
+  const wordTop = useTransform(
+    scrollYProgress,
+    [0.75, 0.8],
+    ["-70px", "-230px"]
+  );
   const containerTop = useTransform(scrollYProgress, [0, 0.2], ["70%", "0%"]);
 
   const mainText = "Pague pela sua viagem dentro do app com apenas";
@@ -199,7 +203,13 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
 
         <motion.div
           className="features-phone-position"
-          style={{ y: "-50%", x: "50%", rotate: phoneRotate, right: phoneY }}
+          style={{
+            y: "-50%",
+            x: "50%",
+            rotate: phoneRotate,
+            right: phoneY,
+            opacity: currentScrollY >= 1 ? 0 : 1,
+          }}
         >
           <div className="features-phone-container">
             <img

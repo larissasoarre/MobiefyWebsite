@@ -5,6 +5,7 @@ import { motion, useSpring } from "framer-motion";
 import About from "./components/About/About";
 import Accessibility from "./components/Accessibility/Accessibility";
 import Features from "./components/Features/Features";
+import Route from "./components/Route/Route";
 
 export type CursorProps = {
   cursorEnter?: MouseEventHandler;
@@ -62,6 +63,7 @@ function App() {
       <About />
       <Accessibility />
       <Features cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
+      <Route />
     </>
   );
 }
