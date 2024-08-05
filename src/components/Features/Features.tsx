@@ -104,7 +104,7 @@ export default function Features({ cursorEnter, cursorLeave }: FeaturesProps) {
     {
       image: DecorEight,
       finalX: "80%",
-      finalY: "16^",
+      finalY: "16%",
     },
     {
       image: DecorNine,
