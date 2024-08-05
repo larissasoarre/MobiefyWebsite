@@ -9,11 +9,13 @@
   --fontFamily-text: "Roboto";
   --fontFamily-heading: "Righteous";
 
+  --fontSize-desktop-xs: 12px;
   --fontSize-desktop-s: 14px;
   --fontSize-desktop-m: 17px;
   --fontSize-desktop-l: 55px;
 
   --fontWeight-bold: 700;
+  --fontWeight-semibold: 500;
   --fontWeight-regular: 400;
 
   --lineHeight-desktop-s: 26px;
@@ -35,11 +37,12 @@ body {
   margin: 0;
   max-width: 100vw;
   overflow-x: hidden;
+  transition: ease-in-out 0.3s;
 }
 
 a {
   position: relative;
-  z-index: 1;
+  z-index: 11;
 }
 
 a:hover {
@@ -61,12 +64,5 @@ p {
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 99;
-}
-
-.no-copy {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  z-index: 10;
 }

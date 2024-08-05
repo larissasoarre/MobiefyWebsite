@@ -4,11 +4,22 @@ import "./Button.css";
 type ButtonProps = { children?: ReactNode } & DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
->;
+> & {
+    variant?: "standard" | "mobile";
+  };
 
-export default function Button({ children, ...props }: ButtonProps) {
+export default function Button({
+  variant = "standard",
+  children,
+  ...props
+}: ButtonProps) {
   return (
-    <button className="button" {...props}>
+    <button
+      className={`button ${
+        variant === "standard" ? "button-standard" : "button-mobile"
+      }`}
+      {...props}
+    >
       {children}
     </button>
   );
