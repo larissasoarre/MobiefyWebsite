@@ -11,9 +11,9 @@
 .button-standard {
   background-color: var(--color-primary);
   font-weight: var(--fontWeight-bold);
-  font-size: var(--fontSize-desktop-s);
+  font-size: var(--fontSize-desktop-xs);
   letter-spacing: 1.5px;
-  padding: 12px 40px;
+  padding: 12px 25px;
   text-transform: uppercase;
 }
 

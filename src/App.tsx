@@ -1,12 +1,12 @@
 import { MouseEventHandler, useEffect, useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
 import { motion, useSpring } from "framer-motion";
-import About from "./components/About/About";
-import Accessibility from "./components/Accessibility/Accessibility";
-import Features from "./components/Features/Features";
-import Route from "./components/Route/Route";
-import Footer from "./components/Footer/Footer";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import MobieClub from "./pages/MobieClub/MobieClub";
+import Navbar from "./components/Navbar/Navbar";
 
 export type CursorProps = {
   cursorEnter?: MouseEventHandler;
@@ -17,6 +17,21 @@ function App() {
   const [cursorVariant, setCursorVariant] = useState("default");
   const cursorX = useSpring(0, { stiffness: 500, damping: 30, mass: 1 });
   const cursorY = useSpring(0, { stiffness: 500, damping: 30, mass: 1 });
+  const { pathname, hash, key } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace("#", ""); // Remove the '#' symbol
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0); // Small delay to ensure the element is available in the DOM
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash, key]);
 
   useEffect(() => {
     const mouseMove = (e: MouseEvent) => {
@@ -61,12 +76,39 @@ function App() {
         animate={cursorVariant}
         transition={{ duration: 0.2 }}
       />
-      <Header cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
-      <About />
-      <Accessibility />
-      <Features cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
-      <Route />
-      <Footer cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
+
+      <Navbar cursorEnter={cursorEnter} cursorLeave={cursorEnter} />
+
+      <Routes>
+        <Route
+          path="/"
+          element={<Home cursorEnter={cursorEnter} cursorLeave={cursorLeave} />}
+        />
+        <Route
+          path="/termos-de-uso"
+          element={
+            <TermsAndConditions
+              cursorEnter={cursorEnter}
+              cursorLeave={cursorLeave}
+            />
+          }
+        />
+        <Route
+          path="/politica-de-privacidade"
+          element={
+            <PrivacyPolicy
+              cursorEnter={cursorEnter}
+              cursorLeave={cursorLeave}
+            />
+          }
+        />
+        <Route
+          path="/mobieclub"
+          element={
+            <MobieClub cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
+          }
+        />
+      </Routes>
     </>
   );
 }
