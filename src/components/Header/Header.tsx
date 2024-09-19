@@ -54,44 +54,6 @@ export default function Header({ cursorEnter, cursorLeave }: HeaderProps) {
 
   return (
     <div className="header-container">
-      <nav className="header-navbar">
-        <span className="header-logo">Mobiefy</span>
-        <ol className="header-navigation">
-          <li>
-            <a
-              onMouseEnter={cursorEnter}
-              onMouseLeave={cursorLeave}
-              href="#about"
-            >
-              Sobre
-            </a>
-          </li>
-          <li>
-            <a
-              onMouseEnter={cursorEnter}
-              onMouseLeave={cursorLeave}
-              href="#features"
-            >
-              Vantagens
-            </a>
-          </li>
-          <li>
-            <Button
-              onMouseEnter={cursorEnter}
-              onMouseLeave={cursorLeave}
-              onClick={() =>
-                window.open(
-                  "https://github.com/larissasoarre/Mobiefy",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-            >
-              Baixar App
-            </Button>
-          </li>
-        </ol>
-      </nav>
       <div className="header-content">
         <p>
           Desbloqueando viagens inteligentes com seu passaporte de mobilidade
