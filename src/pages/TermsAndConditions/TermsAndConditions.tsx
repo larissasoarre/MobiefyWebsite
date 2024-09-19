@@ -72,7 +72,7 @@ export default function TermsAndConditions({
             <a
               onMouseEnter={cursorEnter}
               onMouseLeave={cursorLeave}
-              href="https://github.com/beatriznonato"
+              href="https://mobiefy.netlify.app/politica-de-privacidade"
             >
               Política de Privacidade
             </a>
