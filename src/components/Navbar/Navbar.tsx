@@ -45,19 +45,11 @@ export default function Navbar({ cursorEnter, cursorLeave }: NavbarProps) {
           </Link>
         </li>
         <li>
-          <Button
-            onMouseEnter={cursorEnter}
-            onMouseLeave={cursorLeave}
-            onClick={() =>
-              window.open(
-                "https://github.com/larissasoarre/Mobiefy",
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
-          >
-            Baixar App
-          </Button>
+          <a href="/mobiefy.apk" download>
+            <Button onMouseEnter={cursorEnter} onMouseLeave={cursorLeave}>
+              Baixar App
+            </Button>
+          </a>
         </li>
       </ol>
     </nav>

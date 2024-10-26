@@ -7,6 +7,7 @@ import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import MobieClub from "./pages/MobieClub/MobieClub";
 import Navbar from "./components/Navbar/Navbar";
+import DownloadApp from "./pages/DownloadApp/DownloadApp";
 
 export type CursorProps = {
   cursorEnter?: MouseEventHandler;
@@ -77,7 +78,9 @@ function App() {
         transition={{ duration: 0.2 }}
       />
 
-      <Navbar cursorEnter={cursorEnter} cursorLeave={cursorEnter} />
+      {pathname !== "/baixar-app" && (
+        <Navbar cursorEnter={cursorEnter} cursorLeave={cursorEnter} />
+      )}
 
       <Routes>
         <Route
@@ -106,6 +109,12 @@ function App() {
           path="/mobieclub"
           element={
             <MobieClub cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
+          }
+        />
+        <Route
+          path="/baixar-app"
+          element={
+            <DownloadApp cursorEnter={cursorEnter} cursorLeave={cursorLeave} />
           }
         />
       </Routes>

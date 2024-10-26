@@ -87,19 +87,11 @@ export default function Conclusion({ cursorEnter, cursorLeave }: CursorProps) {
       </svg>
       <div className="conclusion-content">
         <h3>De norte a sul, mova-se com liberdade e eficiência</h3>
-        <Button
-          onMouseEnter={cursorEnter}
-          onMouseLeave={cursorLeave}
-          onClick={() =>
-            window.open(
-              "https://github.com/larissasoarre/Mobiefy",
-              "_blank",
-              "noopener,noreferrer"
-            )
-          }
-        >
-          Download App
-        </Button>
+        <a href="/mobiefy.apk" download>
+          <Button onMouseEnter={cursorEnter} onMouseLeave={cursorLeave}>
+            Baixar App
+          </Button>
+        </a>
       </div>
       {elements.map((element, idx) => (
         <motion.img
